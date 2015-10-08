@@ -1,0 +1,26 @@
+\section{Programming the Bird}
+In this section we are going to think about what code we should give our "Bird" sprite.
+
+\subsection{Initialisation}
+This just means how we want the bird to be set up when the game is started. Placing the bird back in the middle of the screen is a good idea:
+\pic{0301-init}
+
+
+\subsection{Gravity}
+A simple way of giving the bird gravity would be to gradually reduce its y-coordinate, using this block:
+\pic{0302-gravity}
+
+\subsection{Flight}
+We next need to decide on what we're going to use as input for this game. I chose the spacebar, so my code block for flight looks like:
+\pic{0303-flight}
+But you can choose any button you like.
+
+\subsection{Animation}
+Wouldn't it be cool if the bird's wings could flap when its flying? 
+This can be easily done by switching between different costumes:
+\pic{0304-nextcostume}
+The Parrot Sprite that I'm using contains two costumes with the wings in different positions, but you can draw the different costumes if you prefer.
+
+\subsection{Finished Code for Bird}
+Therefore, the final code for the Bird sprite should look like this:
+\pic{0305-birdcode}

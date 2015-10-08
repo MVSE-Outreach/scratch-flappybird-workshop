@@ -1,0 +1,19 @@
+\section{Game Over}
+This section explains how you program the Bird sprite so that it can detect when it hits the ground or an obstacle.
+
+Firstly you need to change the "forever" loop into a "repeat until" loop:
+\pic{0601-repeatuntil}
+
+Inside that we want to put an OR operator:
+\pic{0602-or}
+
+In both sides of this OR, we need "touching" sensors:
+\pic{0603-touch}
+
+After the loop, we want a "game over" message and the game to stop.
+
+See if you can find those blocks yourself.
+
+The final code should look something like this:
+
+\pic{0605-finalgameover}

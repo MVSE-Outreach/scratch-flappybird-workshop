@@ -1,0 +1,62 @@
+\section{Programming the Obstacles}
+This next section builds up some scripts for the Obstacles sprite.
+
+\subsection{Cloning}
+We want the obstacles to keep coming until the game ends, but instead of making loads of different sprites, we can make lots of copies of a single sprite.
+
+\vfill
+
+Firstly, we need to make the original invisible:
+\pic{0401-hide}
+
+and then repeatedly create a clone:
+\pic{0402-clone}
+
+Overall, this looks like:
+\pic{0403-fullclone}
+
+\vfill
+
+
+
+Now, we need to tell the Obstacles Sprite what to do when it is cloned:
+\pic{0404-whenclone}
+
+The obstacle needs to start off to the right of the screen, but be centered in the middle, so add in:
+\pic{0405-setoffscreen}
+
+
+\subsection{Randomisation}
+We want to select one of the costumes by random:
+\pic{0402-random}
+
+
+Next we should undo the invisibility, so the clone is visible. Try to find the code piece that does that.
+
+
+\subsection{Moving}
+Now our cloning is set up, we need to make them move across the screen.
+
+\vfill
+
+Similarly to the gravity in the "Bird" sprite, we're going to put a movement piece inside a loop.
+
+However, we want our loop to end when the sprite gets to the opposite edge of the screen, so try combining:
+\pic{0406-repeatuntil}
+\pic{0407-lessthan}
+and
+\pic{0408-xposition}
+to make the loop stop when the clone reaches the left edge of the screen (where the X-coordinate is -250).
+
+Once we don't need a clone anymore, it is really important to delete it:
+\pic{0409-deleteclone}
+
+
+\vfill
+
+Now your code should look something like this:
+\pic{0410-finalpipe}
+
+\vfill
+
+You might want to have a fiddle with the "wait" and "move" numbers here and in the bird sprite, so that the game is as easy or as hard as you wish.
