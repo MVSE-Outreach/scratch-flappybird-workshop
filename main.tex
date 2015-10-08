@@ -1,0 +1,28 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\graphicspath{{img/}}
+\newcommand{\pic}[1]{\begin{center}\includegraphics{#1}\end{center}}
+
+\title{Coding Flappy Bird with Scratch}
+\author{Luke Storry}
+\date{}
+
+\begin{document}
+
+\maketitle
+{\begin{center}\includegraphics[width=10cm]{0001-overview}\end{center}}
+\tableofcontents
+
+ \centering
+
+%\let\clearpage\relax
+\include{src/01-intro}
+\include{src/02-start}
+\include{src/03-bird}
+\include{src/04-pipes}
+\include{src/05-score}
+\include{src/06-gameover}
+\end{document}
